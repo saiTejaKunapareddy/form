@@ -2,53 +2,56 @@
     height: 60px;
     background-color: #00b5b0;
 }
-#ticket{
-   color: white;   
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   /* border: 2px solid red; */
-   height: 60px;
+
+#ticket {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
+
 #div2{
     border: 2px solid red;
     width: 1000px;
     height: 100px;
 }
+
 label {
     display: block;
     margin-top: 10px;
+    font-size: 16px;
 }
+
 input, select {
     margin: 5px 0;
     padding: 8px;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%;  /* Ensure inputs take full width */
+    box-sizing: border-box;  /* Make sure padding is included in width calculation */
 }
+
 .form-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: block;  /* Change flex to block to make fields appear one below another */
+    margin: 20px; /* Optional for spacing */
 }
+
 .form-column {
-    width: 45%;
+    width: 100%;  /* Each column should span the full width */
+    margin-bottom: 20px;  /* Optional for spacing between fields */
 }
+
 .bold {
     font-weight: bold;
 }
+
 #button1{
-    /* border: 2px solid red; */
-    width: 900px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
-#btn1{
-    width: 160px;
-    height: 40px;
-    color: white;
-    background-color: rgb(34, 134, 126);
-}
-#btn2{
+
+#btn1, #btn2 {
     width: 160px;
     height: 40px;
     color: white;

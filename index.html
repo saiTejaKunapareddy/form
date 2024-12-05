@@ -8,66 +8,61 @@
 </head>
 <body>
     <div id="div1">
-            <h2 id="ticket">Ticket Recieved</h2>
+        <h2 id="ticket">Samsung  Automatic Tracker
+        </h2>
     </div>
     <form action="#" method="post">
         <div class="form-container">
-            <!-- Left Side -->
+          
             <div class="form-column">
-                <label for="ticket-received-time">Ticket Received Time:</label>
-                <input type="text" id="ticket-received-time" name="ticket-received-time">
+                <label for="parent-ticket-id">Parent Ticket ID:</label>
+                <input type="text" id="parent-ticket-id" name="parent_ticket_id" required>
                 
-                <label for="campaign-start-date">Campaign Start Date:</label>
-                <input type="text" id="campaign-start-date" name="campaign-start-date" required>
+                <label for="child-ticket-id">Child Ticket ID:</label>
+                <input type="text" id="child-ticket-id" name="child_ticket_id" required>
                 
-                <label for="ticket-type">Ticket Type:</label>
-                <input type="text" id="ticket-type" name="ticket-type" value="Non Commercial" class="bold" readonly>
+                <label for="line-id">Line ID:</label>
+                <input type="text" id="line-id" name="line_id" required>
                 
-                <label for="teams">Teams:</label>
-                <input type="text" id="teams" name="teams">
+                <label for="creatives">Creatives:</label>
+                <input type="text" id="creatives" name="creatives" required>
                 
-                <label for="jira-ticket-id">Jira Ticket ID:</label>
-                <input type="text" id="jira-ticket-id" name="jira-ticket-id">
+                <label for="setup-type">Setup Type:</label>
+                <select id="setup-type" name="setup_type" required>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Non Commercial" selected>Non Commercial</option>
+                </select>
                 
-                <label for="no-of-lineitems">No Of Lineitems:</label>
-                <input type="number" id="no-of-lineitems" name="no-of-lineitems">
+                <label for="day-partying">Day Partying:</label>
+                <div id="day-partying">
+                    <input type="radio" id="yes" name="day_partying" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="day_partying" value="no" required>
+                    <label for="no">No</label>
+                </div>
                 
-                <label for="assignee">Assignee:</label>
-                <input type="text" id="assignee" name="assignee">
+                <label for="qa-ticket-id">QA Ticket ID:</label>
+                <input type="text" id="qa-ticket-id" name="QA_ticket_id" required>
                 
-                <label for="priority">Priority:</label>
-                <input type="text" id="priority" name="priority">
+                <label for="ticket-status">Ticket Status:</label>
+                <select id="ticket-status" name="ticket_status" required>
+                    <option value="Setup in Progress">Setup in Progress</option>
+                    <option value="Waiting for Update">Waiting for Update</option>
+                    <option value="Ready for QA">Ready for QA</option>
+                </select>
             </div>
 
             <div class="form-column">
-                <label for="requestor">Requestor:</label>
-                <input type="text" id="requestor" name="requestor">
-                
-                <label for="campaign-end-date">Campaign End Date:</label>
-                <input type="text" id="campaign-end-date" name="campaign-end-date">
-                
-                <label for="line-item-type">Type:</label>
-                <input type="text" id="line-item-type" name="line-item-type" value="Line Item" class="bold" readonly>
-                
-                <label for="parent-id">Parent ID:</label>
-                <input type="text" id="parent-id" name="parent-id">
-                
-                <label for="campaign-details">Campaign Details:</label>
-                <input type="text" id="campaign-details" name="campaign-details">
-                
-                <label for="no-of-creatives">No Of Creatives:</label>
-                <input type="number" id="no-of-creatives" name="no-of-creatives">
-                
-                <label for="submitted-date">Submitted Date:</label>
-              
+                <label for="campaign-start-date">Campaign Start Date:</label>
+                <input type="datetime-local" id="campaign-start-date" name="campaign_start_date" required>
             </div>
         </div>
         <div id="button1">
-        <button id="btn1" type="submit">Submit</button>
-        <button id="btn2">Update</button>
-    </div>
+            <button id="btn1" type="submit">Submit</button>
+        </div>
     </form>
 
-<script src="./form.js"></script>
+    <script src="./form.js"></script>
 </body>
 </html>
+ 
