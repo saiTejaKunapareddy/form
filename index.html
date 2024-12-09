@@ -3,71 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Samsung  Automatic Tracker</title>
     <link rel="stylesheet" href="./form.css">
 </head>
 <body>
     <div id="div1">
-            <h2 id="ticket">Ticket Recieved</h2>
+        <h2 id="ticket">Samsung  Automatic Tracker</h2>
     </div>
-    <form action="#" method="post">
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+      <div id="customAlert" class="alert">
+        <p>Success! Your Ticket was submitted successfully.</p>
+        <button class="alert-button" onclick="closeSuccessAlert()">OK</button>
+      </div>
+    
+    <div id="StartBtn">
+        <button id="btnStart" type="button">Start</button>
+    </div>
+    <div id="timerDisplay">Time: 0h 0m 0s</div>
+
+    <form action="#" method="post" id="content">
         <div class="form-container">
-            <!-- Left Side -->
-            <div class="form-column">
-                <label for="ticket-received-time">Ticket Received Time:</label>
-                <input type="text" id="ticket-received-time" name="ticket-received-time">
-                
-                <label for="campaign-start-date">Campaign Start Date:</label>
-                <input type="text" id="campaign-start-date" name="campaign-start-date" required>
-                
-                <label for="ticket-type">Ticket Type:</label>
-                <input type="text" id="ticket-type" name="ticket-type" value="Non Commercial" class="bold" readonly>
-                
-                <label for="teams">Teams:</label>
-                <input type="text" id="teams" name="teams">
-                
-                <label for="jira-ticket-id">Jira Ticket ID:</label>
-                <input type="text" id="jira-ticket-id" name="jira-ticket-id">
-                
-                <label for="no-of-lineitems">No Of Lineitems:</label>
-                <input type="number" id="no-of-lineitems" name="no-of-lineitems">
-                
-                <label for="assignee">Assignee:</label>
-                <input type="text" id="assignee" name="assignee">
-                
-                <label for="priority">Priority:</label>
-                <input type="text" id="priority" name="priority">
+            <div class="form-column" id="form1">
+                <label for="parent-ticket-id">Parent Ticket ID:</label>
+                <input type="text" id="parent-ticket-id" name="parent_ticket_id" required disabled>
+
+                <label for="child-ticket-id">Child Ticket ID:</label>
+                <input type="text" id="child-ticket-id" name="child_ticket_id" required disabled>
+
+                <label for="line-id">Line ID:</label>
+                <input type="text" id="line-id" name="line_id" required disabled>
+
+                <label for="creatives">Creatives:</label>
+                <input type="text" id="creatives" name="creatives" required disabled>
+
+                <label for="setup-type">Setup Type:</label>
+                <select id="dropdown" name="setup_type" required disabled>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Non Commercial" selected>Non Commercial</option>
+                </select>
+
+                <label for="day-partying">Day Parting:</label>
+                <div id="day-partying">
+                    <label for="yes">
+                        <input type="radio" id="yes" name="day_partying" value="yes" required disabled>
+                        Yes
+                    </label>
+                    <label for="no">
+                        <input type="radio" id="no" name="day_partying" value="no" required disabled>
+                        No
+                    </label>
+                </div>
+
+                <label for="qa-ticket-id">QA Ticket ID:</label>
+                <input type="text" id="qa-ticket-id" name="QA_ticket_id" required disabled>
+
+                <label for="ticket-status">Ticket Status:</label>
+                <select id="dropdown1" name="ticket_status" required disabled>
+                    <option value="Setup in Progress">Setup in Progress</option>
+                    <option value="Waiting for Update">Waiting for Update</option>
+                    <option value="Ready for QA">Ready for QA</option>
+                </select>
             </div>
 
-            <div class="form-column">
-                <label for="requestor">Requestor:</label>
-                <input type="text" id="requestor" name="requestor">
-                
-                <label for="campaign-end-date">Campaign End Date:</label>
-                <input type="text" id="campaign-end-date" name="campaign-end-date">
-                
-                <label for="line-item-type">Type:</label>
-                <input type="text" id="line-item-type" name="line-item-type" value="Line Item" class="bold" readonly>
-                
-                <label for="parent-id">Parent ID:</label>
-                <input type="text" id="parent-id" name="parent-id">
-                
-                <label for="campaign-details">Campaign Details:</label>
-                <input type="text" id="campaign-details" name="campaign-details">
-                
-                <label for="no-of-creatives">No Of Creatives:</label>
-                <input type="number" id="no-of-creatives" name="no-of-creatives">
-                
-                <label for="submitted-date">Submitted Date:</label>
-              
+            <div>
+                <label for="campaign-start-date">Campaign Start Date:</label>
+                <input type="datetime-local" id="campaign-start-date" name="campaign_start_date" required disabled>
             </div>
+            <!-- <div>
+                <label for="campaign-end-date">Campaign End Date:</label>
+                <input type="datetime-local" id="campaign-end-date" name="campaign_end_date" required>
+            </div> -->
         </div>
         <div id="button1">
-        <button id="btn1" type="submit">Submit</button>
-        <button id="btn2">Update</button>
-    </div>
+            <button id="btn1" type="submit">Submit</button>
+        </div>
+       
+        <div id="button2">
+            <button id="btn2" type="reset">Reset</button>
+        </div>
     </form>
 
-<script src="./form.js"></script>
+    <script src="./form.js"></script>
 </body>
 </html>
